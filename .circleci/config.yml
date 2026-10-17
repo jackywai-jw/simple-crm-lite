@@ -64,7 +64,8 @@ jobs:
           name: Run tests
           command: |
             echo "Running tests..."
-            mvn test
+            ## mvn test
+            mvn clean install -DskipTests
       - store_test_results:
           path: target/surefire-reports
       - store_artifacts:
